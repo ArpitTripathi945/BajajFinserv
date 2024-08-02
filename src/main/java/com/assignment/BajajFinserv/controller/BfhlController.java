@@ -2,10 +2,7 @@ package com.assignment.BajajFinserv.controller;
 import com.assignment.BajajFinserv.entity.OperationCode;
 import com.assignment.BajajFinserv.entity.RequestDTO;
 import com.assignment.BajajFinserv.entity.ResponseDTO;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +10,7 @@ import java.util.List;
 @RestController
 public class BfhlController {
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/bfhl")
     public ResponseDTO handlePostRequest(@RequestBody RequestDTO request) {
         String userId = "john_doe_17091999";
@@ -37,6 +35,7 @@ public class BfhlController {
         return new ResponseDTO(true, userId, email, rollNumber, numbers, alphabets, highestAlphabet);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/bfhl")
     public OperationCode handleGetRequest(){
 
