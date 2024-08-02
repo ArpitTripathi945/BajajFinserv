@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class BfhlController {
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://arpittripathi2549.tech")
     @PostMapping("/bfhl")
     public ResponseDTO handlePostRequest(@RequestBody RequestDTO request) {
         String userId = "john_doe_17091999";
@@ -35,7 +35,7 @@ public class BfhlController {
         return new ResponseDTO(true, userId, email, rollNumber, numbers, alphabets, highestAlphabet);
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://arpittripathi2549.tech")
     @GetMapping("/bfhl")
     public OperationCode handleGetRequest(){
 
